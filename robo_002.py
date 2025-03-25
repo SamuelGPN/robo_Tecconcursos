@@ -120,39 +120,40 @@ for e in lista_cursos:
 
     #materia_tipo_geral_fixo = browser.find_element(By.XPATH, '//*[@id="caderno-novo"]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/ul/li/ul/li/div/span[2]/span[2]')
 
-    print('passou1')
-    print('passou2')
+    #print('passou1')
+    #print('passou2')
     time.sleep(3)
     browser.implicitly_wait(2)
-    sublista_element_1 = browser.find_element(By.XPATH, '//*[@id="caderno-novo"]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/ul/li/ul/li')
-    sublista_element = sublista_element_1.find_elements(By.TAG_NAME, 'li')
-    qtd_sublistas = len(sublista_element)
+    time.sleep(2)
+    sublista_element_1 = browser.find_elements(By.XPATH,'//*[@id="caderno-novo"]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/ul/li/ul/li/ul/li')
+    qtd_sublistas = len(sublista_element_1)
+    #print(qtd_sublistas)
     print('qtd sublista',qtd_sublistas )
-    print('passou3')
+    #print('passou3')
     #print('CHEGOU')
     for o in range(qtd_sublistas):
-        print('range: ', o)
+        #print('range: ', o)
         #print('ENTROU')
         try:
             xpath_caminho = f'//*[@id="caderno-novo"]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/ul/li/ul/li/ul/li[{o + 1}]/div/span[2]/span[2]'
             xpath_li_element = f'//*[@id="caderno-novo"]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/ul/li/ul/li/ul/li[{o + 1}]'
-            print('foi1')
+            # print('foi1')
             time.sleep(0.5)
             li_element = browser.find_element(By.XPATH, f'{xpath_li_element}')
-            print('foi2')
+            #print('foi2')
 
             time.sleep(0.5)
             verif_subcat = li_element.find_element(By.TAG_NAME, 'ul')
-            print('foi3')
-            print('DEU')
+            #print('foi3')
+            #print('DEU')
 
 
             time.sleep(0.5)
             div_element = browser.find_element(By.XPATH, f'{xpath_caminho}')
             print(div_element.text)
-            print('foi4')
+            #print('foi4')
             div_element.click()
-            print('foi5')
+            #print('foi5')
         except:
             # Procorar elemento div
             time.sleep(0.5)
@@ -161,7 +162,7 @@ for e in lista_cursos:
             print(div_element.text)
 
 
-            print('passou4')
+            #print('passou4')
 
     """
         #vvvvv verifica se há sublistas no assunto selecionado
