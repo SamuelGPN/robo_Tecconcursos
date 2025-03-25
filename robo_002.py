@@ -120,8 +120,6 @@ for e in lista_cursos:
 
     #materia_tipo_geral_fixo = browser.find_element(By.XPATH, '//*[@id="caderno-novo"]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/ul/li/ul/li/div/span[2]/span[2]')
 
-    #print('passou1')
-    #print('passou2')
     time.sleep(3)
     browser.implicitly_wait(2)
     time.sleep(2)
